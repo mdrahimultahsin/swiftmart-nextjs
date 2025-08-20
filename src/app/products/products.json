@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-quality noise-cancelling over-ear headphones with long battery life.",
+    "price": 99.99,
+    "category": "Electronics",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch",
+    "description": "Fitness tracking smartwatch with heart rate monitoring and GPS.",
+    "price": 149.99,
+    "category": "Electronics",
+    "image": "https://images-cdn.ubuy.co.in/653dca4638b3b6351c03b03e-smart-watch-for-android-and-iphone.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Gaming Laptop",
+    "description": "Powerful laptop with high-end GPU, perfect for gaming and content creation.",
+    "price": 1299.99,
+    "category": "Computers",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 4,
+    "name": "Bluetooth Speaker",
+    "description": "Portable speaker with rich sound and 12-hour battery life.",
+    "price": 49.99,
+    "category": "Audio",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 5,
+    "name": "Running Shoes",
+    "description": "Comfortable and lightweight running shoes for everyday training.",
+    "price": 79.99,
+    "category": "Footwear",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 6,
+    "name": "Backpack",
+    "description": "Durable and spacious backpack suitable for travel or daily use.",
+    "price": 59.99,
+    "category": "Accessories",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 7,
+    "name": "4K Monitor",
+    "description": "Ultra HD 27-inch monitor with stunning colors and fast refresh rate.",
+    "price": 349.99,
+    "category": "Computers",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 8,
+    "name": "Coffee Maker",
+    "description": "Automatic coffee maker with programmable timer and strong brew options.",
+    "price": 89.99,
+    "category": "Home Appliances",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 9,
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with adjustable DPI and long battery life.",
+    "price": 29.99,
+    "category": "Computers",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  },
+  {
+    "id": 10,
+    "name": "Yoga Mat",
+    "description": "Eco-friendly non-slip yoga mat for fitness and relaxation.",
+    "price": 39.99,
+    "category": "Fitness",
+    "image": "https://www.gadstyle.com/wp-content/uploads/2025/07/XUNDD-DOO4-ANC-Wireless-Headphones-1.webp"
+  }
+]
