@@ -7,7 +7,6 @@ export const metadata = {
 export default async function HomePage() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`);
   const products = await res.json();
-  console.log(products);
 
   return (
     <div className="min-h-screen flex flex-col">

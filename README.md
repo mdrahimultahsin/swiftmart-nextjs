@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SwiftMart - Next.js E-commerce App
 
-## Getting Started
+## Project Description
+SwiftMart is a simple e-commerce web application built with **Next.js 15 (App Router)**.  
+It allows users to browse products, view product details, and, after logging in, manage products via a protected dashboard.  
+The app features authentication with **NextAuth.js**, server-side API routes, and dynamic product data with MongoDB.  
+Tailwind CSS + DaisyUI is used for a responsive and themeable design with dark/light mode support.
 
-First, run the development server:
+---
 
+## Features
+- **Public Pages:**  
+  - Landing page with Hero & Product Highlights  
+  - Product listing page  
+  - Product detail page  
+- **Authentication:**  
+  - Login with Google (NextAuth.js) or credentials  
+  - Protected product management pages  
+- **Protected Pages:**  
+  - Add new products (only logged-in users)  
+- **Optional Enhancements:**  
+  - Loading spinner on form submission  
+  - Toast notifications for success/failure  
+  - Dark/Light theme toggle  
+
+---
+## Route Summary
+
+| Route | Method | Description | Auth Required |
+|-------|--------|------------|---------------|
+
+
+| `/products` | GET | List all products
+| `/products/[id]` | GET | View details of a single product
+| `/dashboard/add-product` | GET/POST | Add a new product (form + API)
+| `/api/products` | GET | Fetch all products (JSON) 
+| `/api/products` | POST | Add a new product | ✅ Protected Route 
+| `/api/products/[id]` | GET | Fetch a single product by ID | 
+
+
+
+---
+
+## Setup & Installation
+
+1. **Clone the repository:**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd swiftmart
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies:**
+```bash
+git clone <your-repo-url>
+cd swiftmart
+```
+3. **Create a .env.local file in the root directory:**
+```bash
+MONGO_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_nextauth_secret
+NEXTAUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+```
+4. **Run the development server:**
+```bash
+npm run dev
+Open in Browser: http://localhost:3000
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
