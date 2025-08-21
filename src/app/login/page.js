@@ -1,10 +1,9 @@
 "use client";
-import { signIn, useSession, signOut } from "next-auth/react";
-import Image from "next/image";
+import {signIn, useSession, signOut} from "next-auth/react";
 import Link from "next/link";
 
 export default function LoginPage() {
-  const { data: session } = useSession();
+  const {data: session} = useSession();
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-base-200 dark:bg-base-300">
@@ -18,8 +17,8 @@ export default function LoginPage() {
           </p>
 
           <button
-            onClick={() => signIn("google", { callbackUrl: "/products" })}
-            className="flex items-center justify-center gap-3 w-full px-4 py-2 rounded-lg bg-white dark:bg-gray-800 hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer text-black"
+            onClick={() => signIn("google", {callbackUrl: "/products"})}
+            className="flex items-center justify-center gap-3 w-full px-4 py-2 rounded-lg border border-neutral-content bg-white dark:bg-gray-800 hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer text-black"
           >
             <svg
               aria-label="Google logo"
@@ -53,13 +52,6 @@ export default function LoginPage() {
         </div>
       ) : (
         <div className="bg-base-100 dark:bg-base-200 p-8 rounded-xl shadow-xl w-full max-w-sm text-center flex flex-col items-center gap-4">
-          {session.user.image && (
-            <img
-              src={session.user.image}
-              alt={session.user.name}
-              className="w-20 h-20 rounded-full ring-2 ring-primary"
-            />
-          )}
           <h2 className="text-2xl font-semibold text-primary dark:text-secondary">
             Welcome, {session.user.name}!
           </h2>
@@ -71,7 +63,7 @@ export default function LoginPage() {
               Go to Products
             </Link>
             <button
-              onClick={() => signOut({ callbackUrl: "/" })}
+              onClick={() => signOut({callbackUrl: "/login"})}
               className="btn btn-outline btn-accent"
             >
               Logout
