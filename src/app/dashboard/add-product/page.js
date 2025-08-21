@@ -35,7 +35,7 @@ const categories = ["Electronics", "Fashion", "Home Appliances", "Fitness", "Acc
   };
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 space-y-4">
+    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-6 space-y-4 bg-base-300 my-10 rounded-lg">
       <h2 className="text-2xl font-bold">Add Product</h2>
       <input
         name="name"
@@ -76,8 +76,31 @@ const categories = ["Electronics", "Fashion", "Home Appliances", "Fitness", "Acc
       />
       <button
         type="submit"
-        className="bg-primary cursor-pointer text-white px-4 py-2 rounded"
+        className="bg-primary text-white px-4 py-2 rounded flex items-center justify-center"
+        disabled={loading} 
       >
+        {loading ? (
+          <svg
+            className="animate-spin h-5 w-5 mr-2 text-white"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              className="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              strokeWidth="4"
+            ></circle>
+            <path
+              className="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v8H4z"
+            ></path>
+          </svg>
+        ) : null}
         {loading ? "Adding..." : "Add Product"}
       </button>
     </form>

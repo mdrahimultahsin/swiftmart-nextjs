@@ -3,7 +3,8 @@ import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import {SessionProvider} from "next-auth/react";
+import {useEffect, useState} from "react";
+import SessionProviderWrapper from "./components/SessionProviderWrapper";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -15,18 +16,23 @@ const geistMono = Geist_Mono({
 });
 
 export default function RootLayout({children}) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SessionProvider>
+        <SessionProviderWrapper>
           {/* Navbar */}
           <Navbar />
-          {children}
+          <main className="min-h-[calc(100vh-170px)]">{children}</main>
           {/* Footer */}
           <Footer />
-        </SessionProvider>
+        </SessionProviderWrapper>
       </body>
     </html>
   );
