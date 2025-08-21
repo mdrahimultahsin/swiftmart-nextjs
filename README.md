@@ -20,7 +20,7 @@ Tailwind CSS + DaisyUI is used for a responsive and themeable design with dark/l
   - Add new products (only logged-in users)  
 - **Optional Enhancements:**  
   - Loading spinner on form submission  
-  - Toast notifications for success/failure  
+
   - Dark/Light theme toggle  
 
 ---
